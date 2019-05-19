@@ -48,7 +48,7 @@
           <h2 class="visually-hidden">Горячие предложения</h2>
       </section>
       <section class="main-advantages">
-      <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороже</h2>
+      <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженного</h2>
       <ul class="advantages-list">
         <li class="advantages-item">
           <span></span>
@@ -102,16 +102,70 @@
     </footer>
     <section class="modal modal-search">
       <h2>поиск по сайту</h2>
-      <p></p>
+      <form action="search.html" method="get" name="form_search">
+        <label for="catalog-search" class="visually-hidden">Поиск по сайту </label>
+        <input type="search" id="catalog-search" name="search-results" />
+        <button>Поиск по сайту</button>
+      </form>
     </section>
-    <section class="modal madal-feedback">
+    <section class="modal modal-feedback">
       <h2>Мы обязательно Вам ответим</h2>
       <span class="close"></span>
+      <form method="post" name="form_feedback" action="send-phone.php">
+        <p>
+          <label class="visually-hidden" for="feedback_name">Как Вас зовут?</label>
+          <input type="text" name="name" id="feedback_name" value="" placeholder="Как вас зовут?" />
+        </p>
+        <p>
+          <label class="visually-hidden" for="feedback_email">Ваша почта для ответа</label>
+          <input type="email" id="feedback_email" name="email" placeholder="Ваша почта для ответа" />
+        </p>
+        <p>
+          <label for="feedback_message" class="visually-hidden">Напишите что-нибудь</label>
+          <textarea name="message" rows="8" cols="80" id="feedback_message" placeholder="Напишите что-нибудь">
+          </textarea>
+        </p>
+        <button type="submit" name="send">Отправить</button>
+      </form>
     </section>
     <section class="modal modal-entrance">
       <h2>Вход в личный кабинет</h2>
-        <form class="" action="index.html" method="post">
-        </form>
+        <form class="" name="from_entrance" action="index.html" method="post">
+          <p>
+            <label for="entrance-email" class="visually-hidden">Электронная почта</label>
+            <input type="email" id="entrance-email" name="email" placeholder="Электронная почта" />
+          </p>
+          <p>
+            <label for="password" class="visually-hidden">Введите пароль</label>
+            <input type="password" name="password" value="" id="password" placeholder="Пароль">
+        </p>
+        <input type="submit" value="Войти">
+        <a href="restore-password.html" title="Восстановить пароль">Забыли пароль?</a>
+        <a href="registration.html" title="Зарегистрироваться">Новая регистрация</a>
+      </form>
+    </section>
+    <section class="modal small-cart">
+      <h2 class="visually-hidden">Малая корзина</h2>
+      <ul  class="small-cart_items">
+        <li>
+          <button type="button" value="delete" aria-label="Удалить из корзины"></button>
+          <img src="img/1.png" alt="Пломбир с апельсиновым джемом"/>
+          <a href="catalog/orange.html" title="Пломбир с апельсиновым джемом" class="small-cart__name">Пломбир с апельсиновым джемом</a>
+          <div class="small-cart__calculation">1,5 кг х <span class="small-cart__price">200 руб.</span></div>
+          <div class="small-cart__itemtotal">300 руб.</div>
+        </li>
+        <li>
+          <button type="button" value="delete" aria-label="Удалить из корзины"></button>
+          <img src="img/1-1.png" alt="Клубничный пломбир с присыпкой из белого шоколада"/>
+          <a href="catalog/strawberry.html" title="Клубничный пломбир с присыпкой из белого шоколада" class="small-cart__name">Клубничный пломбир с присыпкой из белого шоколада</a>
+          <div class="small-cart__calculation">1,5 кг х <span class="small-cart__price">300 руб.</span></div>
+          <div class="small-cart__itemtotal">400 руб.</div>
+        </li>
+      </ul>
+      <p class="small-cart__total">
+        Итого: 750 руб.
+      </p>
+      <a href="catalog/cart.html" class="btn button-main" >Оформить заказ</a>
     </section>
   </body>
 </html>
