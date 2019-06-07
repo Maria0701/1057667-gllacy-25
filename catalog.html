@@ -65,7 +65,7 @@
               </div>
             </li>
             <li class="top-cart top-cart-full">
-              <a href="/cart">Пусто</a>
+              <a href="/cart">2 товара</a>
               <div class="modal small-cart">
                 <p class="visually-hidden">Малая корзина</p>
                 <ul  class="small-cart_items">
@@ -100,11 +100,11 @@
     <main class="container">
       <ul class="breadcrumbs">
         <li><a href="index.html" title="Главная">Главная</a></li>
-        <li><a href="catalog.html" title="Католог">Католог</a></li>
+        <li><a href="catalog.html" title="Каталог">Каталог</a></li>
         <li>Сливочное</li>
       </ul>
       <section class="catalog">
-        <h1>Сливочное мороженное</h1>
+        <h1 class="main-title">Сливочное мороженное</h1>
         <div class="shop-filter">
         </div>
           <ul class="catalog-list wrapper">
@@ -235,7 +235,6 @@
        </ul>
       </ul>
       <p class="main-created">
-
           <img src="img/icons/logo-htmlacademy.svg" alt="Лого академии" width="110px" height-"40px"/>
           <span>Сделано в <a href="" title="">HTML Academy 2019 </a></span>
       </p>
@@ -244,18 +243,20 @@
       <h2>Мы обязательно Вам ответим</h2>
       <span class="close"></span>
       <form method="post" name="form_feedback" action="send-phone.php">
-        <label class="visually-hidden" for="feedback_name">
-          <input type="text" name="name" id="feedback_name" value="" placeholder="Как вас зовут?" />
+        <label >
+          <input type="text" name="name" id="feedback_name" value="" placeholder="" />
           <span>Как Вас зовут?</span>
         </label>
-        <label class="visually-hidden" for="feedback_email">
-          <input type="email" id="feedback_email" name="email" placeholder="Ваша почта для ответа" />
+        <label >
+          <input type="email" id="feedback_email" name="email" placeholder="" />
           <span>Ваша почта для ответа</span>
         </label>
-        <textarea name="message" rows="8" cols="80" id="feedback_message" placeholder="Напишите что-нибудь">
-            Напишите что-нибудь
+        <label>
+          <textarea name="message" rows="8" cols="30" id="feedback_message" placeholder="">
           </textarea>
-        <button type="submit" name="send">Отправить</button>
+          <span>Напишите что-нибудь</span>
+        </label>
+        <button type="submit" name="send" class="btn btn-small">Отправить</button>
       </form>
     </section>
   </body>
