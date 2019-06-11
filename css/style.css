@@ -1018,7 +1018,7 @@ img {
   margin-bottom:3px;
   margin-top:6px;
 }
-.main-adress p+button{
+.main-adress p+.btn{
   margin-top: 24px;
 }
 /**footer**/
