@@ -472,6 +472,7 @@ img {
   padding-bottom: 25px;
   padding-left:25px;
   box-sizing:border-box;
+  z-index:4;
 }
 .modal-feedback form {
   display:flex;
@@ -486,6 +487,25 @@ img {
 }
 .modal-feedback button {
   align-self:flex-end;
+}
+.modal-feedback .close {
+  position:absolute;
+  height:17px;
+  width: 17px;
+  display: block;
+  top: 15px;
+  left: 444px;
+  background-image:url(../img/icons/cross-big.svg);
+}
+.overlay {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:2;
+  background-color:rgba(0,0,0,0.3);
+  display:none;
 }
 /**small-cart_items**/
 .small-cart {
@@ -973,6 +993,8 @@ img {
   color: #999;
   display:block;
 }
+
+
 /**main-adress**/
 .map {
   display:flex;
@@ -1254,4 +1276,3 @@ img {
   color: #ffbc9e;
   border-bottom:1px solid rgba(255,188,158,0.3);
 }
-.overlay {}
