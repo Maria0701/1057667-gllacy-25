@@ -4,6 +4,7 @@ body {
   line-height: 22px;
   color: #323232;
   background-color: #849d8f;
+  margin:0;
 }
 .main-title,
 .h1 {
@@ -36,9 +37,9 @@ body {
   vertical-align:top;
   color:#fff;
   background-color: #f06441;
-  background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -moz-linear-gradient( 90deg, #f26843 0%, #e74a35 100%);
+  background-image: -webkit-linear-gradient( 90deg, #f26843 0%, #e74a35 100%);
+  background-image: -ms-linear-gradient( 90deg,  #f26843 0%, #e74a35 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   border:transparent;
   border-radius:32px;
@@ -55,17 +56,17 @@ body {
 .btn:hover,
 .btn:focus {
   color:#fff;
-  background-image: -moz-linear-gradient( 90deg, #dd735a 0%, #eb6d5c  100%);
-  background-image: -webkit-linear-gradient( 90deg, #dd735a 0%, #eb6d5c  100%);
-  background-image: -ms-linear-gradient( 90deg, #dd735a 0%, #eb6d5c 100%);
-  box-shadow: 0 1px 2px 0px rgba(139, 12, 1 );
+  background-image: -moz-linear-gradient( 90deg, #f58669 0%, #ec6f5e  100%);
+  background-image: -webkit-linear-gradient( 90deg, #f58669 0%, #ec6f5e  100%);
+  background-image: -ms-linear-gradient( 90deg, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 .btn:active {
   color:#fff;
-  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  box-shadow: 0 1px 2px 0px rgba(139, 12, 1 );
+  background-image: -moz-linear-gradient( 90deg, #d84732 0%, #e1613e 100%);
+  background-image: -webkit-linear-gradient( 90deg, #d84732 0%, #e1613e 100%);
+  background-image: -ms-linear-gradient( 90deg, #d84732 0%, #e1613e 100%);
+  box-shadow: 0 2px 2px 0px rgba(172, 16, 0, 1 );
 }
 .btn-medium {
   padding-top:11px;
@@ -108,6 +109,7 @@ img {
   margin-right:auto;
   margin-left:auto;
   box-sizing:border-box;
+  padding-top:8px;
 }
 .header-navigation {
   display:flex;
@@ -593,6 +595,7 @@ img {
 }
 /**main-slider**/
 .main-slider {
+  position:relative;
   width:1200px;
   padding-right: 27px;
   padding-left: 27px;
@@ -612,7 +615,6 @@ img {
   z-index:0;
   display:none;
 }
-.slider-item.active {display:block;}
 .slider-name {
   color:#fff;
   font-size:60px;
@@ -626,14 +628,62 @@ img {
   z-index:1;
   padding-top:310px;
 }
-.slider-item img {
-  position: absolute;
-  top: -77px;
-  left: 50%;
-  z-index: -1;
-  margin-left: -521px;
+.slider-switcher {
+  position:absolute;
+  bottom:63px;
+  left:27px;
+  margin:0;
+  padding:0;
+  list-style: none;
 }
-
+.slider-switcher label {
+  display:inline-block;
+}
+.slider-switcher label+label {
+  margin-left: 8px;
+}
+.slider-switcher label{
+  width:17px;
+  height:17px;
+  border:2px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  text-indent: -9999px;
+  padding: 0;
+}
+.slider-switcher label:hover {
+  background-color:rgba(255,255,255, 0.4);
+}
+.main-wrapper{
+  min-width: 940px;
+  background-color: #849d8f;
+  background-image: url("../img/morozhenki.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+#first-offer:checked ~ .main-wrapper {
+  background-color: #849d8f;
+  background-image:url(../img/morozhenki.png);
+}
+#second-offer:checked ~ .main-wrapper {
+  background-color: #8996a6;
+  background-image:url(../img/morozhenki2.png);
+}
+#third-offer:checked ~ .main-wrapper {
+  background-color: #9d8b84;
+  background-image:url(../img/morozhenki3.png);
+}
+#first-offer:checked ~ .main-wrapper #first-slide,
+#second-offer:checked ~ .main-wrapper #second-slide,
+#third-offer:checked ~ .main-wrapper #third-slide {
+  display:block;
+}
+#first-offer:checked ~ .main-wrapper .slider-switcher label[for="first-offer"],
+#second-offer:checked ~ .main-wrapper .slider-switcher label[for="second-offer"],
+#third-offer:checked ~ .main-wrapper .slider-switcher label[for="third-offer"] {
+  background-color:#fff;
+}
 /***main-specials**/
 .main-specials  {
   margin-bottom:40px;
@@ -758,7 +808,24 @@ img {
   left:7px;
   background-image: url(../img/icons/ruble.svg);
 }
-
+.item-hover {
+  position:absolute;
+  top:-7px;
+  left:-13px;
+  width:293px;
+  background-color:rgba(248, 247, 244, 0.2);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  z-index:3;
+  border-radius:4px;
+  display:none;
+}
+.catalog-item:hover .item-hover{
+  display:block;
+}
+.item-hover .btn-medium {
+  margin-top: 339px;
+  margin-bottom: 20px;
+}
 /***advantages**/
 .main-advantages {
   margin-bottom: 40px;
@@ -1187,3 +1254,4 @@ img {
   color: #ffbc9e;
   border-bottom:1px solid rgba(255,188,158,0.3);
 }
+.overlay {}
