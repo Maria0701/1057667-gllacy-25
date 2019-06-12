@@ -33,13 +33,12 @@
             <li class="top-search">
               <a href="#modal-search" title=""><span class="visually-hidden">Поиск по каталогу</span></a>
               <div class="modal modal-search">
-                <form action="search.html" method="get" name="form_search">
+                <form action="search.html" method="get" >
                   <p class="visually-hidden">Поиск по сайту</p>
                   <label>
                     <input type="search"name="search-results" />
                     <span>Что ищем?</span>
                   </label>
-                  <button >Поиск по сайту</button>
                 </form>
               </div>
             </li>
@@ -47,7 +46,7 @@
               <a href="#modal-entrance">Вход</a>
               <div class="modal modal-entrance">
                 <p class="visually-hidden">Вход в личный кабинет</p>
-                  <form class="" name="form-entrance" action="index.html" method="post">
+                  <form class="" action="index.html" method="post">
                     <label >
                       <input type="email" id="entrance-email" name="email" />
                       <span>Электронная почта</span>
@@ -106,6 +105,70 @@
       <section class="catalog">
         <h1 class="main-title">Сливочное мороженное</h1>
         <div class="shop-filter">
+          <form  action="" method="get" class="shop-filter__form">
+            <label><span class="shop-filter__name ">Сортировка</span>
+              <div class="shop-filter__block select">
+                <select name="sorting">
+                  <option value="popularity" selected>По популярности</option>
+                  <option value="cheap">Сначала недорогие</option>
+                  <option value="pricy">Сначала дорогие</option>
+                  <option value="fatt-first">по жирности</option>
+                </select>
+              </div>
+            </label>
+            <label><span class="shop-filter__name ">Цена: 100 руб. - 500 руб.</span>
+              <div class="shop-filter__block range">
+                <input type="range" name="price-range">
+              </div>
+            </label>
+            <fieldset class="shop-filter__fieldset">
+              <legend class="shop-filter__name ">Жирность</legend>
+              <div class="shop-filter__block">
+                  <label>
+                    <input type="radio" name="fett-range" value="0%" class="visually-hidden">
+                    <span class="radio-btn"></span>0%
+                  </label>
+                  <label>
+                    <input type="radio" name="fett-range" value="до 10%" checked class="visually-hidden"/>
+                    <span class="radio-btn"></span>до 10%
+                  </label>
+                  <label>
+                    <input type="radio" name="fett-range" value="до 30%" class="visually-hidden"/>
+                    <span class="radio-btn"></span>до 30%
+                  </label>
+                  <label>
+                    <input type="radio" name="fett-range" value="выше 30%" class="visually-hidden"/>
+                    <span class="radio-btn"></span>выше 30%
+                  </label>
+              </div>
+             </fieldset>
+             <fieldset class="shop-filter__fieldset">
+               <legend class="shop-filter__name ">Наполнители</legend>
+               <div class="shop-filter__block">
+                 <label>
+                   <input type="checkbox" name="chocolate" checked class="visually-hidden" />
+                   <span class="check-btn"></span>Шоколадное
+                 </label>
+                 <label>
+                   <input type="checkbox" name="shugar-addons" checked class="visually-hidden"/>
+                   <span class="check-btn"></span>Сахарные присыпки
+                 </label>
+                 <label>
+                   <input type="checkbox" name="fruits" class="visually-hidden"/>
+                   <span class="check-btn"></span>Фрукты
+                 </label>
+                 <label>
+                   <input type="checkbox" name="sipop" class="visually-hidden"/>
+                   <span class="check-btn"></span>Сиропы
+                 </label>
+                 <label>
+                   <input type="checkbox" name="jam" class="visually-hidden"/>
+                   <span class="check-btn"></span>Джемы
+                 </label>
+               </div>
+             </fieldset>
+             <input type="submit" value="Применить" />
+          </form>
         </div>
           <ul class="catalog-list wrapper">
             <li class="catalog-item">
