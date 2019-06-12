@@ -40,7 +40,7 @@
                     <form action="search.html" method="get" name="form_search">
                       <p class="visually-hidden">Поиск по сайту</p>
                       <label>
-                        <input type="search"name="search-results" />
+                        <input type="search" name="search-results" />
                         <span>Что ищем?</span>
                       </label>
                     </form>
@@ -74,14 +74,14 @@
                     <ul  class="small-cart_items">
                       <li>
                         <button type="button" value="delete" aria-label="Удалить из корзины"></button>
-                        <img src="img/1.png" alt="Пломбир с апельсиновым джемом" width="32px" height="32px"/>
+                        <img src="img/1.png" alt="Пломбир с апельсиновым джемом" width="32" height="32"/>
                         <a href="catalog/orange.html" title="Пломбир с апельсиновым джемом" class="small-cart__name">Пломбир с апельсиновым джемом</a>
                         <div class="small-cart__calculation">1,5 кг х <span class="small-cart__price">200 руб.</span></div>
                         <div class="small-cart__itemtotal">300 руб.</div>
                       </li>
                       <li>
                         <button type="button" value="delete" aria-label="Удалить из корзины"></button>
-                        <img src="img/1-1.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="32px" height="32px"/>
+                        <img src="img/1-1.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="32" height="32"/>
                         <a href="catalog/strawberry.html" title="Клубничный пломбир с присыпкой из белого шоколада" class="small-cart__name">Клубничный пломбир с присыпкой из белого шоколада</a>
                         <div class="small-cart__calculation">1,5 кг х <span class="small-cart__price">300 руб.</span></div>
                         <div class="small-cart__itemtotal">400 руб.</div>
@@ -103,6 +103,7 @@
         <main>
           <h1 class="visually-hidden">Магазин мороженного Глейси</h1>
           <section class="main-slider">
+            <h2 class="visually-hidden">Пакетные предложения мороженного</h2>
             <ul class="slider-list">
               <li class="slider-item " id="first-slide">
                 <p class="slider-name">Крем-брюле и пломбир
@@ -228,7 +229,8 @@
             </div>
           </div>
           <section class="map container">
-             <adress class="main-adress">
+            <h2 class="visually-hidden">Адрес магазина</h2>
+             <div class="main-adress">
                <p>Адрес главного офиса
                  <br/>и офлайн-магазина:</p>
                <p class="adress-bold adress">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
@@ -236,7 +238,7 @@
                 <p class="adress-bold phone">8 812 450-25-25</p>
                <p>(с 10 до 20 ежедневно)</p>
                <a href="#" class="btn btn-medium">Форма обратной связи</a>
-             </adress>
+             </div>
           </section>
         </main>
         <footer class="main-fotter container">
@@ -250,18 +252,22 @@
               <span class="visually-hidden">Вконтакте</span></a></li>
           </ul>
           <ul class="bottom-menu">
-            <ul>
-              <li><a href="#" title="">Для поставщиков</a></li>
-              <li><a href="#" title="">Наши документы</a></li>
-            </ul>
-            <ul>
-              <li><a href="#" title="">О производстве</a></li>
-              <li><a href="#" title="">Экологические стандарты</a></li>
-           </ul>
+            <li>
+              <ul>
+                <li class="bottom-menu__heart"><a href="#" title="">Для поставщиков</a></li>
+                <li><a href="#" title="">Наши документы</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#" title="">О производстве</a></li>
+                <li><a href="#" title="">Экологические стандарты</a></li>
+              </ul>
+            </li>
           </ul>
           <p class="main-created">
-              <img src="img/icons/logo-htmlacademy.svg" alt="Лого академии" width="110px" height-"40px"/>
-              <span>Сделано в <a href="" title="">HTML Academy 2019 </a></span>
+              <img src="img/icons/logo-htmlacademy.svg" alt="Лого академии" width="110" height="40"/>
+              <span>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" title="">HTML Academy 2019 </a></span>
           </p>
         </footer>
     </div>

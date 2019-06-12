@@ -36,7 +36,7 @@
                 <form action="search.html" method="get" >
                   <p class="visually-hidden">Поиск по сайту</p>
                   <label>
-                    <input type="search"name="search-results" />
+                    <input type="search" name="search-results" />
                     <span>Что ищем?</span>
                   </label>
                 </form>
@@ -70,14 +70,14 @@
                 <ul  class="small-cart_items">
                   <li>
                     <button type="button" value="delete" aria-label="Удалить из корзины"></button>
-                    <img src="img/1.png" alt="Пломбир с апельсиновым джемом" width="32px" height="32px"/>
+                    <img src="img/1.png" alt="Пломбир с апельсиновым джемом" width="32" height="32"/>
                     <a href="catalog/orange.html" title="Пломбир с апельсиновым джемом" class="small-cart__name">Пломбир с апельсиновым джемом</a>
                     <div class="small-cart__calculation">1,5 кг х <span class="small-cart__price">200 руб.</span></div>
                     <div class="small-cart__itemtotal">300 руб.</div>
                   </li>
                   <li>
                     <button type="button" value="delete" aria-label="Удалить из корзины"></button>
-                    <img src="img/1-1.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="32px" height="32px"/>
+                    <img src="img/1-1.png" alt="Клубничный пломбир с присыпкой из белого шоколада" width="32" height="32"/>
                     <a href="catalog/strawberry.html" title="Клубничный пломбир с присыпкой из белого шоколада" class="small-cart__name">Клубничный пломбир с присыпкой из белого шоколада</a>
                     <div class="small-cart__calculation">1,5 кг х <span class="small-cart__price">300 руб.</span></div>
                     <div class="small-cart__itemtotal">400 руб.</div>
@@ -105,21 +105,23 @@
       <section class="catalog">
         <h1 class="main-title">Сливочное мороженное</h1>
         <div class="shop-filter">
-          <form  action="" method="get" class="shop-filter__form">
+          <form  action="#" method="get" class="shop-filter__form">
             <label><span class="shop-filter__name ">Сортировка</span>
-              <div class="shop-filter__block select">
+              <span class="select">
                 <select name="sorting">
                   <option value="popularity" selected>По популярности</option>
                   <option value="cheap">Сначала недорогие</option>
                   <option value="pricy">Сначала дорогие</option>
                   <option value="fatt-first">по жирности</option>
                 </select>
-              </div>
+              </span>
             </label>
             <label><span class="shop-filter__name ">Цена: 100 руб. - 500 руб.</span>
-              <div class="shop-filter__block range">
-                <input type="range" name="price-range">
-              </div>
+              <span class="shop-filter__block range">
+                <span class="range-indicator">
+                  <span class="range-indicator__inside"></span>
+                </span>
+              </span>
             </label>
             <fieldset class="shop-filter__fieldset">
               <legend class="shop-filter__name ">Жирность</legend>
@@ -299,7 +301,7 @@
             <li><a href="">3</a></li>
             <li><a href="">4</a></li>
             <li><a href="">5</a></li>
-            <li><a href="" id="prev" class="pagination-next"><span class="visually-hidden">Следующая страница</span></a></li>
+            <li><a href="" id="next" class="pagination-next"><span class="visually-hidden">Следующая страница</span></a></li>
         </ul>
       </section>
     </main>
@@ -314,18 +316,22 @@
           <span class="visually-hidden">Вконтакте</span></a></li>
       </ul>
       <ul class="bottom-menu">
+        <li>
         <ul>
-          <li><a href="#" title="">Для поставщиков</a></li>
+          <li class="bottom-menu__heart"><a href="#" title="">Для поставщиков</a></li>
           <li><a href="#" title="">Наши документы</a></li>
         </ul>
+      </li>
+      <li>
         <ul>
           <li><a href="#" title="">О производстве</a></li>
           <li><a href="#" title="">Экологические стандарты</a></li>
        </ul>
+     </li>
       </ul>
       <p class="main-created">
-          <img src="img/icons/logo-htmlacademy.svg" alt="Лого академии" width="110px" height-"40px"/>
-          <span>Сделано в <a href="" title="">HTML Academy 2019 </a></span>
+          <img src="img/icons/logo-htmlacademy.svg" alt="Лого академии" width="110" height="40"/>
+          <span>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" title="">HTML Academy 2019 </a></span>
       </p>
     </footer>
     <section class="modal modal-feedback">
