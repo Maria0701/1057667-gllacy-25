@@ -40,7 +40,7 @@
                     <form action="search.html" method="get" name="form_search">
                       <p class="visually-hidden">Поиск по сайту</p>
                       <label>
-                        <input type="search" name="search-results" />
+                        <input type="search" name="search-results"  required/>
                         <span>Что ищем?</span>
                       </label>
                     </form>
@@ -52,11 +52,11 @@
                     <p class="visually-hidden">Вход в личный кабинет</p>
                       <form class="" name="form-entrance" action="index.html" method="post">
                         <label >
-                          <input type="email" id="entrance-email" name="email" />
+                          <input type="email" id="entrance-email" name="email" required />
                           <span>Электронная почта</span>
                         </label>
                         <label >
-                          <input type="password" name="password" />
+                          <input type="password" name="password"  required/>
                           <span>Введите пароль</span>
                         </label>
                       <input type="submit" class="btn btn-small" value="Войти">
@@ -276,15 +276,15 @@
       <span class="close"></span>
       <form method="post" name="form_feedback" action="send-phone.php">
         <label >
-          <input type="text" name="name" id="feedback_name" value="" placeholder="" />
+          <input type="text" name="name" id="feedback_name" value="" placeholder=""  required/>
           <span>Как Вас зовут?</span>
         </label>
         <label >
-          <input type="email" id="feedback_email" name="email" placeholder="" />
+          <input type="email" id="feedback_email" name="email" placeholder=""  required/>
           <span>Ваша почта для ответа</span>
         </label>
         <label>
-          <textarea name="message" rows="8" cols="30" id="feedback_message" placeholder="">
+          <textarea name="message" rows="8" cols="30" id="feedback_message" placeholder=""  required>
           </textarea>
           <span>Напишите что-нибудь</span>
         </label>

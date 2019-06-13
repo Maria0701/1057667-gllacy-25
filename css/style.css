@@ -237,6 +237,7 @@ img {
 .top-user {
   display:flex;
   flex-wrap:wrap;
+  align-items:flex-end;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -247,6 +248,7 @@ img {
 .top-cabinet,
 .top-cart {
   position:relative;
+  height:38px;
 }
 .top-search > a,
 .top-cabinet > a,
@@ -433,12 +435,24 @@ img {
 .modal-feedback textarea:active {
       color: #323232;
 }
-.modal-entrance input[type="password"]:active + span,
-.modal-entrance input[type="email"]:active + span,
-.modal-search input[type="search"]:active + span,
-.modal-feedback input[type="text"]:active + span,
-.modal-feedback input[type="email"]:active + span,
-.modal-feedback textarea:active + span  {
+.modal-entrance input[type="password"]:active ~ span,
+.modal-entrance input[type="email"]:active ~ span,
+.modal-search input[type="search"]:active ~ span,
+.modal-feedback input[type="text"]:active ~ span,
+.modal-feedback input[type="email"]:active ~ span,
+.modal-feedback textarea:active ~ span,
+.modal-entrance input[type="password"]:focus ~ span,
+.modal-entrance input[type="email"]:focus ~ span,
+.modal-search input[type="search"]:focus ~ span,
+.modal-feedback input[type="text"]:focus ~ span,
+.modal-feedback input[type="email"]:focus ~ span,
+.modal-feedback textarea:focus ~ span,
+.modal-entrance input[type="password"]:valid ~ span,
+.modal-entrance input[type="email"]:valid ~ span,
+.modal-search input[type="search"]:valid ~ span,
+.modal-feedback input[type="text"]:valid ~ span,
+.modal-feedback input[type="email"]:valid ~ span,
+.modal-feedback textarea:valid ~ span  {
   display:none;
 }
 .modal-entrance input[type="password"]:hover,
@@ -449,6 +463,9 @@ img {
 .modal-feedback textarea:hover {
   border-width: 2px;
   border-color: rgb(154, 154, 154);
+}
+.modal-feedback textarea:hover {
+  margin-bottom:-2px;
 }
 .modal-entrance input[type="password"]:focus-within,
 .modal-entrance input[type="email"]:focus-within,
@@ -472,7 +489,7 @@ img {
   padding-bottom: 25px;
   padding-left:25px;
   box-sizing:border-box;
-  z-index:4;
+  z-index:6;
 }
 .modal-feedback form {
   display:flex;
@@ -503,7 +520,7 @@ img {
   left:0;
   width:100%;
   height:100%;
-  z-index:2;
+  z-index:5;
   background-color:rgba(0,0,0,0.3);
   display:none;
 }
@@ -799,6 +816,7 @@ img {
   line-height: 22px;
   flex-grow:1;
   text-decoration:none;
+  z-index:4;
 }
 .catalog-item__name span{
   border-bottom:1px solid rgba(255,255,255, 0.2);
@@ -1269,14 +1287,14 @@ img {
   border-bottom: 2px solid #fff;
   border-right: transparent;
   border-top: transparent;
-  left:6px;
+  left:10px;
 }
 .pagination .pagination-next::before {
   border-right: 2px solid #fff;
   border-top: 2px solid #fff;
   border-left: transparent;
   border-bottom: transparent;
-  right:6px;
+  right:10px;
 }
 
 /****filter***/
