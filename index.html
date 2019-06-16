@@ -237,7 +237,7 @@
                <p>Для заказов по телефону:</p>
                 <p class="adress-bold phone">8 812 450-25-25</p>
                <p>(с 10 до 20 ежедневно)</p>
-               <a href="#" class="btn btn-medium">Форма обратной связи</a>
+               <a href="#" class="btn btn-medium  feedback-link">Форма обратной связи</a>
              </div>
           </section>
         </main>
@@ -274,9 +274,9 @@
     <section class="modal modal-feedback">
       <h2>Мы обязательно Вам ответим</h2>
       <span class="close"></span>
-      <form method="post" name="form_feedback" action="send-phone.php">
+      <form method="post" name="form_feedback" class="feedback_form" action="send-phone.php">
         <label >
-          <input type="text" name="name" id="feedback_name" value="" placeholder=""  required/>
+          <input type="text" name="user-name" id="feedback_name" value="" placeholder=""  required/>
           <span>Как Вас зовут?</span>
         </label>
         <label >
@@ -288,9 +288,68 @@
           </textarea>
           <span>Напишите что-нибудь</span>
         </label>
-        <button type="submit" name="send" class="btn btn-small">Отправить</button>
+        <button type="submit" class="btn btn-small">Отправить</button>
       </form>
     </section>
     <div class="overlay"></div>
   </body>
+  <script>
+  var link = document.querySelector(".feedback-link");
+  var popup = document.querySelector(".modal-feedback");
+  var close = document.querySelector(".close");
+  var overlayClose= document.querySelector(".overlay");
+  var userName = popup.querySelector("[name=user-name]");
+  var userEmail = popup.querySelector("[name=email]");
+  var userMessage = popup.querySelector("[name=message]");
+  var form = popup.querySelector(".feedback_form");
+  var isStorageSupport = true;
+  var storage = "";
+
+  try {
+    storage = localStorage.getItem("userName")
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("modal-show");
+
+    if (storage) {
+        userName.value=storage;
+        userEmail.focus();
+      } else {
+        userName.focus();
+      }
+  })
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+  });
+  overlayClose.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+  })
+
+  form.addEventListener("submit", function (evt) {
+    if (!userName || !userEmail || !userMessage) {
+          evt.preventDefault();
+          popup.classList.add("modal-error");
+        } else {
+        if (isStorageSupport) {
+          localStorage.setItem("userName", userName.value );
+        }
+      }
+    })
+
+    window.addEventListener("keydown", function(evt) {
+      if (evt.keyCode === 27) {
+        if (popup.classList.contains("modal-show")) {
+          evt.preventDefault();
+          popup.classList.remove("modal-show");
+        }
+      }
+    })
+
+  </script>
 </html>
