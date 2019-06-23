@@ -1378,12 +1378,12 @@ img {
 /***catalog**/
 .catalog-list {
   padding:0;
-  margin-bottom: 40px;
+  margin-bottom: 49px;
   margin-top: 0;
   list-style:none;
 }
 .catalog-list li {
-    margin-bottom:34px;
+    margin-bottom:31px;
 }
 .pagination {
   padding:0;
@@ -1398,8 +1398,8 @@ img {
           justify-content: flex-end;
 }
 .pagination li {
-  width: 26px;
-  height: 26px;
+  width: 27px;
+  height: 27px;
   background-color: transparent;
   border-radius: 50%;
 }
@@ -1411,7 +1411,7 @@ img {
   font-size: 16px;
   line-height:18px;
   font-weight:500;
-  padding: 4px 9px;
+  padding: 5px 9px;
   border-radius:50%;
   cursor:pointer;
   display:block;
@@ -1497,13 +1497,13 @@ img {
   padding-left:16px;
   margin-right:14px;
   overflow:hidden;
-  margin-bottom:18px;
+  margin-bottom:0;
 }
 .select {
   position:relative;
   display:block;
   margin-right:14px;
-  margin-bottom:18px;
+  margin-bottom:14px;
 }
 .select select {
   -webkit-appearance: none;
@@ -1512,10 +1512,10 @@ img {
   border:0;
   padding-top:10px;
   padding-bottom:10px;
-  padding-right:21px;
+  padding-right:23px;
   padding-left:16px;
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius:32px;
+  border-radius:33px;
   color:#fff;
   font-size: 16px;
   line-height: 18px;
@@ -1559,9 +1559,15 @@ img {
   line-height:18px;
   font-weight:500;
   padding-left:32px;
-  margin-right: 20px;
+  margin-right: 14px;
   vertical-align: middle;
   cursor: pointer;
+}
+.shop-filter__block.checkboxes label {
+  margin-right: 16px;
+}
+.shop-filter__block label:last-child {
+  margin-right:0;
 }
 .radio-btn {
   position:absolute;
@@ -1609,10 +1615,9 @@ img {
   -ms-flex-item-align:end;
       align-self:flex-end;
   padding-right:29px;
-  padding-left:27px;
-  padding-top:8px;
-  padding-bottom:8px;
-  margin-bottom:18px;
+  padding-left:29px;
+  padding-top:7px;
+  padding-bottom:7px;
   border:2px solid #fff;
   border-radius:22px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -1641,14 +1646,14 @@ img {
 .shop-filter__block.range {
   display:block;
   padding-top:16px;
-  padding-right: 21px;
+  padding-right: 20px;
   padding-bottom:16px;
-  padding-left: 21px;
+  padding-left: 20px;
 }
 .range-indicator {
   position:relative;
   display:block;
-  width:176px;
+  width:180px;
   height:4px;
   background-color:rgba(255, 255, 255, 0.3);
 }
@@ -1656,7 +1661,7 @@ img {
   position:absolute;
   display:block;
   top:0;
-  left:33px;
+  left:37px;
   width:78px;
   height:4px;
   background-color:#fff;
