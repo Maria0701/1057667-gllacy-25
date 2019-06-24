@@ -89,7 +89,7 @@ body {
   padding-right: 23px;
   padding-left: 23px;
 
-  font-size: 17px;
+  font-size: 18px;
 }
 .btn-medium {
   padding-right: 16px;
@@ -512,14 +512,22 @@ img {
 .modal-search span,
 .modal-feedback span {
   position: absolute;
-  top: 12px;
   left: 14px;
   display: block;
 
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: 1px;
   color: #999999;
+  background-color: transparent;
+}
+.modal-entrance span,
+.modal-feedback span {
+  top: 12px;
+
+   letter-spacing: 1px;
+}
+.modal-search span {
+    top: 9px;
 }
 .modal-entrance input[type="password"]:active,
 .modal-entrance input[type="email"]:active,
