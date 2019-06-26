@@ -5,7 +5,7 @@
     <meta name="description" content="" />
     <meta charset="utf-8">
     <title>Магазин мороженного Glaccy</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   </head>
   <body>
@@ -237,6 +237,7 @@
               <a href="#" class="btn feedback-link">Форма обратной связи</a>
               </div>
             </section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4753.373190727575!2d30.322907893097188!3d59.93965475765998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1561564936413!5m2!1sru!2sru" width="100%" height="430" frameborder="0" style="border:0" class="map-iframe" allowfullscreen></iframe>
           </div>
         </main>
         <footer class="main-fotter container">
@@ -290,65 +291,7 @@
       </form>
     </section>
     <div class="overlay"></div>
-    <script>
-    var link = document.querySelector(".feedback-link");
-    var popup = document.querySelector(".modal-feedback");
-    var close = document.querySelector(".close");
-    var overlayClose= document.querySelector(".overlay");
-    var userName = popup.querySelector("[name=user-name]");
-    var userEmail = popup.querySelector("[name=email]");
-    var userMessage = popup.querySelector("[name=message]");
-    var form = popup.querySelector(".feedback_form");
-    var isStorageSupport = true;
-    var storage = "";
-
-    try {
-      storage = localStorage.getItem("userName")
-    } catch (err) {
-      isStorageSupport = false;
-    }
-
-    link.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-
-      if (storage) {
-          userName.value=storage;
-          userEmail.focus();
-        } else {
-          userName.focus();
-        }
-    })
-    close.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.remove("modal-show");
-    });
-    overlayClose.addEventListener("click", function(evt) {
-      evt.preventDefault();
-      popup.classList.remove("modal-show");
-    })
-
-    form.addEventListener("submit", function (evt) {
-      if (!userName || !userEmail || !userMessage) {
-            evt.preventDefault();
-            popup.classList.add("modal-error");
-          } else {
-          if (isStorageSupport) {
-            localStorage.setItem("userName", userName.value );
-          }
-        }
-      })
-
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          if (popup.classList.contains("modal-show")) {
-            evt.preventDefault();
-            popup.classList.remove("modal-show");
-          }
-        }
-      })
-
-    </script>
+    <script src="js/popup.min.js"></script>
   </body>
 
 </html>
