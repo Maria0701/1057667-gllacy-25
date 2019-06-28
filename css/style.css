@@ -122,7 +122,6 @@ img {
 
 .header-block {
 	position: relative;
-	padding-top: 3px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -145,7 +144,7 @@ img {
 
 .logo {
 	margin-right: 10px;
-	margin-top: 7px;
+	margin-top: 8px;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
 }
@@ -1082,8 +1081,8 @@ img {
 	flex-grow: 1;
 	width: 100%;
 	padding-top: 8px;
-	padding-right: 7px;
-	padding-left: 7px;
+	padding-right: 5px;
+	padding-left: 6px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	font-size: 14px;
@@ -1558,7 +1557,7 @@ img {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin-right: 277px;
-	margin-top: 19px;
+	margin-top: 21px;
 	margin-bottom: 4px;
 	padding: 0;
 	list-style: none;
@@ -1772,7 +1771,7 @@ img {
 .select select {
 	position: relative;
 	padding-top: 10px;
-	padding-right: 36px;
+	padding-right: 42px;
 	padding-bottom: 10px;
 	padding-left: 16px;
 	-webkit-appearance: none;
