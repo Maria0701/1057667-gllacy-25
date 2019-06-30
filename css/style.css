@@ -542,15 +542,11 @@ img {
 }
 
 
-/* Firefox 19+ */
-
 .modal-feedback input:-moz-placeholder {
 	color: #999999;
 	letter-spacing: 1px;
 }
 
-
-/* Firefox 18- */
 
 .modal-feedback input:-ms-input-placeholder {
 	color: #999999;
@@ -568,15 +564,11 @@ img {
 }
 
 
-/* Firefox 19+ */
-
 .modal-feedback textarea:-moz-placeholder {
 	color: #999999;
 	letter-spacing: 1px;
 }
 
-
-/* Firefox 18- */
 
 .modal-feedback textarea:-ms-input-placeholder {
 	color: #999999;
@@ -594,15 +586,11 @@ img {
 }
 
 
-/* Firefox 19+ */
-
 .modal-entrance input:-moz-placeholder {
 	color: #999999;
 	letter-spacing: 1px;
 }
 
-
-/* Firefox 18- */
 
 .modal-entrance input:-ms-input-placeholder {
 	color: #999999;
@@ -620,15 +608,11 @@ img {
 }
 
 
-/* Firefox 19+ */
-
 .modal-search input:-moz-placeholder {
 	color: #999999;
 	letter-spacing: 1px;
 }
 
-
-/* Firefox 18- */
 
 .modal-search input:-ms-input-placeholder {
 	color: #999999;
@@ -646,17 +630,13 @@ img {
 }
 
 
-/* Firefox 19+ */
-
 .subscription-form input:-moz-placeholder {
 	color: #999999;
 	letter-spacing: 1px;
 }
 
 
-/* Firefox 18- */
-
-.subscription-form input:-ms-input-placeholder {
+.subscription-form input[type="email"]:-ms-input-placeholder {
 	color: #999999;
 	letter-spacing: 1px;
 }
