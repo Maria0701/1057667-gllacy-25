@@ -33,11 +33,14 @@ close.addEventListener("click", function (evt) {
 overlayClose.addEventListener("click", function(evt) {
   evt.preventDefault();
   popup.classList.remove("modal-show");
+  popup.classList.remove("modal-error");
 })
 
 form.addEventListener("submit", function (evt) {
-  if (!userName || !userEmail || !userMessage) {
+    if (!userName.value || !userEmail.value || !userMessage.value) {
         evt.preventDefault();
+        popup.classList.remove("modal-error");
+        popup.offsetWidth = popup.offsetWidth;
         popup.classList.add("modal-error");
       } else {
       if (isStorageSupport) {
@@ -51,6 +54,7 @@ form.addEventListener("submit", function (evt) {
       if (popup.classList.contains("modal-show")) {
         evt.preventDefault();
         popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
       }
     }
   })

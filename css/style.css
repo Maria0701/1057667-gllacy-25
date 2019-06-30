@@ -598,22 +598,22 @@ img {
 	border-color: rgb(154, 154, 154);
 }
 
-.modal-feedback textarea:hover,
+.modal-entrance input[type="password"]:focus,
+.modal-entrance input[type="email"]:focus,
+.modal-search input[type="search"]:focus,
+.modal-feedback input[type="text"]:focus,
+.modal-feedback input[type="email"]:focus,
 .modal-feedback textarea:focus,
-.modal-feedback textarea:focus-within {
-	margin-bottom: -2px;
+.subscription-form input[type="email"]:focus {
+	border-width: 2px;
+	border-color: rgba(46, 136, 228, 0.5);
+	outline: none;
 }
 
-.modal-entrance input[type="password"]:focus-within,
-.modal-entrance input[type="email"]:focus-within,
-.modal-search input[type="search"]:focus-within,
-.modal-feedback input[type="text"]:focus-within,
-.modal-feedback input[type="email"]:focus-within,
-.modal-feedback textarea:focus-within,
-.subscription-form input[type="email"]:focus-within {
-	border-width: 2px;
-	border-color: rgb(46, 136, 228, 0.5);
-	outline: none;
+.modal-feedback textarea:hover,
+.modal-feedback textarea:focus {
+	padding-top: 13px;
+	padding-bottom: 17px;
 }
 
 .modal-feedback {
@@ -1753,7 +1753,7 @@ img {
 	margin-right: 15px;
 	margin-bottom: 0;
 	padding-top: 7px;
-	padding-right: 16px;
+	padding-right: 17px;
 	padding-bottom: 7px;
 	padding-left: 16px;
 	background-color: rgba(255, 255, 255, 0.2);
@@ -1838,7 +1838,7 @@ img {
 }
 
 .shop-filter__block.checkboxes label {
-	margin-right: 16px;
+	margin-right: 17px;
 }
 
 .shop-filter__block label:last-child {
@@ -2065,53 +2065,53 @@ img {
 .modal-error {
 	-webkit-animation-name: modalError;
 	animation-name: modalError;
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
 }
 
 @-webkit-keyframes modalError {
 	0% {
-		-webkit-transform: translateX(-10px);
-		-ms-transform: translateX(-10px);
-		transform: translateX(-10px);
+		-webkit-transform: translate(-10px, -50%);
+		-ms-transform: translate(-10px, -50%);
+		transform: translate(-10px, -50%);
 	}
 	25% {
-		-webkit-transform: translateX(10px);
-		-ms-transform: translateX(10px);
-		transform: translateX(10px);
+		-webkit-transform: translate(10px, -50%);
+		-ms-transform: translate(10px, -50%);
+		transform: translate(10px, -50%);
 	}
 	75% {
-		-webkit-transform: translateX(-10px);
-		-ms-transform: translateX(-10px);
-		transform: translateX(-10px);
+		-webkit-transform: translate(-10px, -50%);
+		-ms-transform: translate(-10px, -50%);
+		transform: translate(-10px, -50%);
 	}
 	100% {
-		-webkit-transform: translateX(10px);
-		-ms-transform: translateX(10px);
-		transform: translateX(10px);
+		-webkit-transform: translate(10px, -50%);
+		-ms-transform: translate(10px, -50%);
+		transform: translate(10px, -50%);
 	}
 }
 
 @keyframes modalError {
 	0% {
-		-webkit-transform: translateX(-10px);
-		-ms-transform: translateX(-10px);
-		transform: translateX(-10px);
+		-webkit-transform: translate(-10px, -50%);
+		-ms-transform: translate(-10px, -50%);
+		transform: translate(-10px, -50%);
 	}
 	25% {
-		-webkit-transform: translateX(10px);
-		-ms-transform: translateX(10px);
-		transform: translateX(10px);
+		-webkit-transform: translate(10px, -50%);
+		-ms-transform: translate(10px, -50%);
+		transform: translate(10px, -50%);
 	}
 	75% {
-		-webkit-transform: translateX(-10px);
-		-ms-transform: translateX(-10px);
-		transform: translateX(-10px);
+		-webkit-transform: translate(-10px, -50%);
+		-ms-transform: translate(-10px, -50%);
+		transform: translate(-10px, -50%);
 	}
 	100% {
-		-webkit-transform: translateX(10px);
-		-ms-transform: translateX(10px);
-		transform: translateX(10px);
+		-webkit-transform: translate(10px, -50%);
+		-ms-transform: translate(10px, -50%);
+		transform: translate(10px, -50%);
 	}
 }
 
