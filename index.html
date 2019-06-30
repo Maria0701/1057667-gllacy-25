@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <title>Магазин мороженного Glaccy</title>
       <link rel="stylesheet" href="css/normalize.min.css">
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style.min.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
    </head>
    <body>
@@ -42,8 +42,8 @@
                         <form action="search.html" method="get" name="form_search">
                            <p class="visually-hidden">Поиск по сайту</p>
                            <label>
-                           <input type="search" name="search-results"  required/>
-                           <span>Что ищем?</span>
+                           <input type="search" name="search-results" placeholder="Что ищем?" required/>
+                           <span class="visually-hidden">Что ищем?</span>
                            </label>
                         </form>
                      </div>
@@ -54,12 +54,12 @@
                         <p class="visually-hidden">Вход в личный кабинет</p>
                         <form class="" name="form-entrance" action="index.html" method="post">
                            <label >
-                           <input type="email" id="entrance-email" name="email" required />
-                           <span>Электронная почта</span>
+                           <input type="email" id="entrance-email" name="email" placeholder="Электронная почта" required />
+                           <span class="visually-hidden">Электронная почта</span>
                            </label>
                            <label >
-                           <input type="password" name="password"  required/>
-                           <span>Введите пароль</span>
+                           <input type="password" name="password" placeholder="Введите пароль" required/>
+                           <span class="visually-hidden">Введите пароль</span>
                            </label>
                            <input type="submit" class="btn btn-small" value="Войти">
                            <div class="modal-entrance-links">
@@ -221,8 +221,8 @@
                      <h2>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </h2>
                      <form class="" action="index.html" method="post">
                         <label class="subscription-form">
-                        <input type="email" name="subscription-male" required>
-                        <span>Электронная почта</span>
+                        <input type="email" name="subscription-male" placeholder="Электронная почта" required>
+                        <span class="visually-hidden">Электронная почта</span>
                         </label>
                         <button type="submit" class="btn btn-medium">Отправить</button>
                      </form>
@@ -313,21 +313,21 @@
          <span class="close"></span>
          <form method="post" name="form_feedback" class="feedback_form" action="send-phone.php">
             <label >
-            <input type="text" name="user-name" id="feedback_name" value="" placeholder="" required />
-            <span>Как Вас зовут?</span>
+            <input type="text" name="user-name" id="feedback_name" value="" placeholder="Как Вас зовут?"/>
+            <span class="visually-hidden">Как Вас зовут?</span>
             </label>
             <label >
-            <input type="email" id="feedback_email" name="email" placeholder="" required />
-            <span>Ваша почта для ответа</span>
+            <input type="email" id="feedback_email" name="email" value="" placeholder="Ваша почта для ответа"/>
+            <span class="visually-hidden">Ваша почта для ответа</span>
             </label>
             <label>
-            <textarea name="message" rows="5" cols="30" id="feedback_message" placeholder="" required ></textarea>
-            <span>Напишите что-нибудь</span>
+            <textarea name="message" rows="5" cols="30" id="feedback_message" value="" placeholder="Напишите что-нибудь"></textarea>
+            <span class="visually-hidden">Напишите что-нибудь</span>
             </label>
             <button type="submit" class="btn btn-small">Отправить</button>
          </form>
       </section>
       <div class="overlay"></div>
-      <script src="js/popup.js"></script>
+      <script src="js/popup.min.js"></script>
    </body>
 </html>
