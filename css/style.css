@@ -536,7 +536,7 @@ img {
 .modal-feedback span {
 	position: absolute;
 	left: 14px;
-	display: block;
+	/*display: block;*/
 	font-size: 14px;
 	line-height: 24px;
 	color: #999999;
@@ -582,11 +582,15 @@ img {
 .modal-search input[type="search"]:valid~span,
 .modal-feedback input[type="text"]:valid~span,
 .modal-feedback input[type="email"]:valid~span,
-.modal-feedback textarea:valid~span,
+/*.modal-feedback textarea:valid~span,*/
 .subscription-form input[type="email"]:valid~span {
 	display: none;
 }
 
+
+.modal-feedback textarea:not(:empty)~span {
+	display: none;
+}
 .modal-entrance input[type="password"]:hover,
 .modal-entrance input[type="email"]:hover,
 .modal-search input[type="search"]:hover,
