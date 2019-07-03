@@ -3,7 +3,7 @@ body {
 	font-style: normal;
 	font-size: 16px;
 	line-height: 22px;
-	font-family: 'Roboto', Arial, sans-serif;
+	font-family: "Roboto", Arial, sans-serif;
 	color: #323232;
 	background-color: #849d8f;
 }
@@ -68,7 +68,7 @@ body {
 
 .btn:hover,
 .btn:focus {
-	color: #fff;
+	color: #ffffff;
 	background-image: -webkit-linear-gradient( 90deg, #f58669 0%, #ec6f5e 100%);
 	background-image: -ms-linear-gradient( 90deg, #f58669 0%, #ec6f5e 100%);
 	-webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
@@ -76,7 +76,7 @@ body {
 }
 
 .btn:active {
-	color: #fff;
+	color: #ffffff;
 	background-image: -webkit-linear-gradient( 90deg, #d84732 0%, #e1613e 100%);
 	background-image: -ms-linear-gradient( 90deg, #d84732 0%, #e1613e 100%);
 	-webkit-box-shadow: 0 2px 2px 0px rgba(172, 16, 0, 1);
@@ -224,10 +224,10 @@ img {
 }
 
 .menu-item:active>a {
+	color: #323232;
 	background-color: rgba(248, 247, 244, 0.988);
 	-webkit-box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105);
 	box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105);
-	color: #323232;
 }
 
 .drop-down {
@@ -299,7 +299,7 @@ img {
 }
 
 .drop-item.current-menu_drop a {
-	color: #fff;
+	color: #ffffff;
 	background-color: rgb(208, 112, 88);
 }
 
@@ -494,7 +494,7 @@ img {
 	font-size: 14px;
 	line-height: 24px;
 	color: #323232;
-	background-color: #fff;
+	background-color: #ffffff;
 	border: 1px solid #d3d3d3;
 	border-radius: 5px;
 }
@@ -638,8 +638,12 @@ img {
 .modal-feedback input[type="email"]:hover,
 .modal-feedback textarea:hover,
 .subscription-form input[type="email"]:hover {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 13px;
+	padding-right: 13px;
 	border-width: 2px;
-	border-color: rgb(154, 154, 154);
+	border-color: #9a9a9a;
 }
 
 .modal-entrance input[type="password"]:focus,
@@ -649,6 +653,10 @@ img {
 .modal-feedback input[type="email"]:focus,
 .modal-feedback textarea:focus,
 .subscription-form input[type="email"]:focus {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 13px;
+	padding-right: 13px;
 	border-width: 2px;
 	border-color: rgba(46, 136, 228, 0.5);
 	outline: none;
@@ -1045,7 +1053,7 @@ img {
 	font-size: 18px;
 	line-height: 22px;
 	font-weight: 700;
-	color: #fff;
+	color: #ffffff;
 }
 
 .main-specials_list .btn {
@@ -1572,7 +1580,7 @@ img {
 
 .bottom-menu a,
 .main-created a {
-	color: #fff;
+	color: #ffffff;
 	background-color: inherit;
 	text-decoration: none;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -1758,16 +1766,16 @@ img {
 
 .pagination .pagination-previous::before {
 	left: 10px;
-	border-left: 2px solid #fff;
-	border-bottom: 2px solid #fff;
+	border-left: 2px solid #ffffff;
+	border-bottom: 2px solid #ffffff;
 	border-right: transparent;
 	border-top: transparent;
 }
 
 .pagination .pagination-next::before {
 	right: 10px;
-	border-right: 2px solid #fff;
-	border-top: 2px solid #fff;
+	border-right: 2px solid #ffffff;
+	border-top: 2px solid #ffffff;
 	border-left: transparent;
 	border-bottom: transparent;
 }
@@ -2033,7 +2041,7 @@ img {
 	width: 4px;
 	height: 4px;
 	border-radius: 50%;
-	border: 8px solid #fff;
+	border: 8px solid #ffffff;
 	cursor: pointer;
 }
 
